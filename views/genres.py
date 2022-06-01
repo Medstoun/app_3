@@ -3,11 +3,14 @@ from flask_restx import Resource, Namespace
 from dao.model.genre import GenreSchema
 from implemented import genre_service
 
+from lesson19_project_hard_source.helpers import auth_required
+
 genre_ns = Namespace('genres')
 
 
 @genre_ns.route('/')
 class GenresView(Resource):
+    @auth_required
     def get(self):
         rs = genre_service.get_all()
         res = GenreSchema(many=True).dump(rs)
