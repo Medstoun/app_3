@@ -1,7 +1,7 @@
 import calendar
 import datetime
 import jwt
-from lesson19_project_hard_source.constants import SECRET_KEY, ALGORITHM
+from constants import SECRET_KEY, ALGORITHM
 
 
 class AuthService:

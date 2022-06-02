@@ -2,9 +2,9 @@ import base64
 import hashlib
 import hmac
 
-from lesson19_project_hard_source.constants import PWD_HASH_SALT, PWD_HASH_ITERATIONS
+from constants import PWD_HASH_SALT, PWD_HASH_ITERATIONS
 
-from lesson19_project_hard_source.dao.user import UserDAO
+from dao.user import UserDAO
 
 
 class UserService:
